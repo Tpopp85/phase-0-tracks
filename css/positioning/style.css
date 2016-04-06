@@ -1,0 +1,25 @@
+div{
+  position: relative;
+  
+
+}
+
+#octo{
+  margin-top: 50px;
+  padding-top: 20px;
+  background-color: blue;
+  margin-left: auto;
+
+
+}
+
+#hat{
+  position: absolute;
+  top: 0px;
+}
+
+#glasses{
+  position: absolute;
+  top: 170px;
+  left: 40px;
+}
