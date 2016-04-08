@@ -1,15 +1,12 @@
 div{
   position: relative;
-  
-
+  margin: 0 auto;
+  width: 25%;
 }
 
 #octo{
-  margin-top: 50px;
+  margin: 55px auto 0 15px;
   padding-top: 20px;
-  background-color: blue;
-  margin-left: auto;
-
 
 }
 
@@ -20,6 +17,6 @@ div{
 
 #glasses{
   position: absolute;
-  top: 170px;
-  left: 40px;
+  top: 175px;
+  left: 57px;
 }
