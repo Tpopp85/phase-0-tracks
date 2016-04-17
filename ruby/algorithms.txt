@@ -1,0 +1,13 @@
+* Press the button outside of the elevator bank
+* Until the door opens, wait
+* After the door opens, move forward until you run into a wall
+* Once you hit the wall, turn right and move forward until you hit a wall
+* Once you hit the wall, turn right and move forward until you hit a wall
+* Once you hit the wall, stop
+* Start at the top of the wall and your hand move down until you come across a button.  
+    If you reach the bottom of the wall without finding a button, 
+      turn right and move forward until you hit a wall
+      turn left 
+      start at the top of the wall and move down until you come across a button
+    otherwise 
+
