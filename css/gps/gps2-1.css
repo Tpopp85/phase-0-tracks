@@ -1,0 +1,42 @@
+header {
+  padding: 10px;
+  margin-left: 20px;
+}
+* {
+  font-family: arial;
+}
+
+.column-1 {
+ 
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  padding: 10px;
+  margin-left: 20px;
+  }
+  
+  .column-2 {
+  
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  padding: 10px;
+  margin-left: 20px;
+    
+  }
+  
+  h1 {
+    font-family: helvetica;
+    text-align: center;
+  }
+  h2 {
+    font-family: helvetica;
+  }
+  a {
+    color: green;
+  }
+  footer {
+    border: 1px solid black
+    padding: 10px;
+    margin-left: 20px;
+  }
