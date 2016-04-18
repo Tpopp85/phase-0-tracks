@@ -1,3 +1,5 @@
+ROBOT Elevator
+
 * Press the button outside of the elevator bank
 * Until the door opens, wait
 * After the door opens, move forward until you run into a wall
@@ -9,5 +11,28 @@
       turn right and move forward until you hit a wall
       turn left 
       start at the top of the wall and move down until you come across a button
-    otherwise 
+    end
+* Start at the first button you find
+    Until this button equals 20
+      move your finger to the next button
+* Once you hit floor 20 wait until the doors open, then exit the elevator
+
+Scoop the litter box
+
+* Pull a plastic bag from the paper bag containing such bags
+* Remove the litter scooper from the cabinet and place it in front of the litter box
+* Find the litter box
+* Kneel down in front of litter box
+* Unfasten clamps on the left side - then the right side
+* Remove the lid from the litter box
+* Start on the left side of the litter box and scoop
+* After each scoop, empty the contents of the scoop into the plastic bag
+* Move over 5 inches and scoop
+* Continue scooping and moving until you hit the far right wall
+* Replace lid to litter box
+* Faster the left and right clamps
+* Tie the plastic bag
+* Place plastic bag in garbage
+
+
 
