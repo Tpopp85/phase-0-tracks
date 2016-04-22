@@ -13,10 +13,14 @@ great_lakes = {
       max_depth: "923 ft",
       max_length: "307 mi",
       volume: "4,918 cubic miles",
-      "major metropolitan areas" => 
-          ["Milwaukee",
-          "Chicago",
-          "Green Bay"]
+      "major metropolitan areas" => [{
+        city:"Milwaukee", population: 50_000
+      }, {
+        city: "Chicago", population: 100_000
+      },
+        "Green Bay"
+      ],
+
   }, 
     Huron: {
       lake_name: "Lake Huron",
@@ -52,5 +56,8 @@ great_lakes = {
 
 puts great_lakes[:Erie]["major metropolitan areas"]
 
-
+puts great_lakes[:Michigan]
+great_lakes.each_key {|key| puts key}
+great_lakes.each{|key,value| puts value[:lake_name]}
+puts great_lakes[:Michigan]["major metropolitan areas"][1]
 
