@@ -14,7 +14,7 @@ class Unicorn
   end
 
   def fly(destination)
-    puts "Unicorn #{@name} is flying to #{destination}and it is magical!"
+    puts "Unicorn #{@name} is flying to #{destination} and it is magical!"
     @destination = destination
   end
 
@@ -33,9 +33,8 @@ unicorn_array = []
 
 puts "Would you like to create any unicorns today? (yes/no)"
 create_unicorns = gets.chomp
-create_unicorns == "yes" ? create_unicorns = true : create_unicorns = false
 
-while create_unicorns
+while create_unicorns == "yes"
   puts "What is the name of your unicorn?"
   name = gets.chomp
 
@@ -60,15 +59,20 @@ while create_unicorns
   if extra_magical
     puts "Like, how magical? On a scale of 1 to 10"
     magicalness_factor = gets.chomp.to_i
-    unicorn.grow_horn(magicalness_factor)
+    if magicalness_factor > 5
+      magicalness_factor = magicalness_factor * 2
+    else
+      magicalness_factor
+    end
+      unicorn.grow_horn(magicalness_factor)
   end
 
 unicorn_array << {name: unicorn.name, age: unicorn.age, destination: unicorn.destination, horn_length: unicorn.horn_length}
 
-puts "Do you want to create another unicorn or what?  Their species is depending on you so no pressure"
+puts "Do you want to create another unicorn or what?  Their species is depending on you, so no pressure..."
 create_unicorns = gets.chomp
-create_unicorns == "yes" ? create_unicorns = true : create_unicorns = false
+
 end
 
-puts unicorn_array
+unicorn_array.each {|unicorn| puts "#{unicorn[:name]} is #{unicorn[:age]} years old and flying to #{unicorn[:destination]}.  He/She has a horn that is #{unicorn[:horn_length]} meters long."}
 
