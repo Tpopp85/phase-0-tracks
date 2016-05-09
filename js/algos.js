@@ -1,9 +1,4 @@
-
-var word_array = [];
-
-//function letterCount (word) {
-  
-//}
+// Function to count the number of characters in a phrase stored in an array
 function phraseCount (input_array) {
   var word_array = [];
     for (var phrase in input_array) {
