@@ -1,9 +1,6 @@
 
 var word_array = [];
 
-//function letterCount (word) {
-  
-//}
 function phraseCount (input_array) {
   var word_array = [];
     for (var phrase in input_array) {
