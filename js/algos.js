@@ -1,3 +1,4 @@
+
 // Function to count the number of characters in a phrase stored in an array
 function phraseCount (input_array) {
   var word_array = [];
@@ -13,7 +14,6 @@ function phraseCount (input_array) {
 function compareObjects (obj1, obj2) {
   for (var property in obj1) {
     if (obj1[property] == obj2[property]){
-      //console.log(property + "=" + obj1[property])
       return true
     }
     else{
