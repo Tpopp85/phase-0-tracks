@@ -1,0 +1,51 @@
+1.
+select * from payments;
+
+1|1000|Legal Services|true|1
+2|1500|Water baloons|true|2
+3|1500|Kittens|true|2
+4|100000|catnip|true|3
+
+
+2.
+sqlite> UPDATE vendor_info SET name="The Catnippery, LLC" WHERE name="Catnippery";
+sqlite> select * from vendor_info;
+
+1|Kevin Kurgis, LLP|1 S. High Street Columbus, OH 43210
+2|That weird kitten and water balloon shop, LLC|10 N. Mayfield R. Cleveland, OH 39403
+3|The Catnippery, LLC|7222 Lyons Rd. Miamisburg, OH 43202
+
+3.
+sqlite> select payments.voucher_num, payments.payment_amt, payments.description, payments.active_vendor, vendor_info.name, vendor_info.address from payments, vendor_info WHERE payments.vendor_num = vendor_info.id;
+
+1|1000|Legal Services|true|Kevin Kurgis, LLP|1 S. High Street Columbus, OH 43210
+2|1500|Water baloons|true|That weird kitten and water balloon shop, LLC|10 N. Mayfield R. Cleveland, OH 39403
+3|1500|Kittens|true|That weird kitten and water balloon shop, LLC|10 N. Mayfield R. Cleveland, OH 39403
+4|100000|catnip|true|The Catnippery, LLC|7222 Lyons Rd. Miamisburg, OH 43202
+
+4.
+sqlite> select payments.voucher_num, payments.payment_amt, payments.description, vendor_info.name from payments, vendor_info WHERE payments.vendor_num = vendor_info.id;
+
+1|1000|Legal Services|Kevin Kurgis, LLP
+2|1500|Water baloons|That weird kitten and water balloon shop, LLC
+3|1500|Kittens|That weird kitten and water balloon shop, LLC
+4|100000|catnip|The Catnippery, LLC
+
+5.  
+sqlite> DELETE FROM payments WHERE description="Water baloons";
+sqlite> select * from payments;
+1|1000|Legal Services|true|1
+3|1500|Kittens|true|2
+4|100000|catnip|true|3
+
+LEFT JOIN
+sqlite> select payments.voucher_num, payments.payment_amt, payments.description, vendor_info.name from vendor_info LEFT JOIN payments ON payments.vendor_num = vendor_info.id;
+
+1|1000|Legal Services|Kevin Kurgis, LLP
+3|1500|Kittens|That weird kitten and water balloon shop, LLC
+4|100000|catnip|The Catnippery, LLC
+|||Kittens and such
+
+FULL OUTER JOIN
+sqlite> select payments.voucher_num, payments.payment_amt, payments.description FROM payments FULL OUTER JOIN vendor_info ON  payments.vendor_num = vendor_info.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
